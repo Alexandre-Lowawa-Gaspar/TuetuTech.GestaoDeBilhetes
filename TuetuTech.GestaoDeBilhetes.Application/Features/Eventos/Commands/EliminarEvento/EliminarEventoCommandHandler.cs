@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TuetuTech.GestaoDeBilhetes.Application.Contracts.Persistence;
+using TuetuTech.GestaoDeBilhetes.Domain.Entities;
 
 namespace TuetuTech.GestaoDeBilhetes.Application.Features.Eventos.Commands.EliminarEvento
 {
@@ -23,6 +24,8 @@ namespace TuetuTech.GestaoDeBilhetes.Application.Features.Eventos.Commands.Elimi
         public async Task<Unit> Handle(EliminarEventoCommand request, CancellationToken cancellationToken)
         {
             var eventoParaEliminar = await _eventoRepository.ObterPorIdAsync(request.EventoId);
+            if (eventoParaEliminar == null)
+                throw new Exceptions.NotFoundException(nameof(Evento), request.EventoId);
             await _eventoRepository.EliminarAsync(eventoParaEliminar);
             return Unit.Value;
         }
