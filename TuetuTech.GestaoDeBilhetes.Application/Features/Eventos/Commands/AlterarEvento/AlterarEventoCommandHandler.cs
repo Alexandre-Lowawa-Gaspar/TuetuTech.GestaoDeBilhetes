@@ -24,6 +24,11 @@ namespace TuetuTech.GestaoDeBilhetes.Application.Features.Eventos.Commands.Alter
         public async Task<Unit> Handle(AlterarEventoCommand request, CancellationToken cancellationToken)
         {
             var eventoParaAlterar = await _eventoRepository.ObterPorIdAsync(request.EventoId);
+            var validacao = new AlterarEventoCommandValidator(_eventoRepository);
+            var resultadoValidacao = await validacao.ValidateAsync(request);
+            if (resultadoValidacao.Errors.Count > 0)
+                throw new Exceptions.ValidationException(resultadoValidacao);
+
             _mapper.Map(request, eventoParaAlterar, typeof(AlterarEventoCommand), typeof(Evento));
             await _eventoRepository.AlterarAsync(eventoParaAlterar);
             return Unit.Value;
