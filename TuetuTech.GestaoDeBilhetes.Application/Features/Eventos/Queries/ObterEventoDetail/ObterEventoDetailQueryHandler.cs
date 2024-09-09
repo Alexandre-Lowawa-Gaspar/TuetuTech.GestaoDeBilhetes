@@ -6,9 +6,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TuetuTech.GestaoDeBilhetes.Application.Contracts.Persistence;
+using TuetuTech.GestaoDeBilhetes.Application.Features.Eventos.Queries.ObterEventosList;
 using TuetuTech.GestaoDeBilhetes.Domain.Entities;
 
-namespace TuetuTech.GestaoDeBilhetes.Application.Features.Events
+namespace TuetuTech.GestaoDeBilhetes.Application.Features.Eventos.Queries.ObterEventoDetail
 {
     public class ObterEventoDetailQueryHandler : IRequestHandler<ObterEventoDetailQuery, EventoDetailVm>
     {

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using TuetuTech.GestaoDeBilhetes.Application.Contracts.Persistence;
 using TuetuTech.GestaoDeBilhetes.Domain.Entities;
 
-namespace TuetuTech.GestaoDeBilhetes.Application.Features.Events
+namespace TuetuTech.GestaoDeBilhetes.Application.Features.Eventos.Queries.ObterEventosList
 {
     public class ObterTodosEventosListQueryHandler : IRequestHandler<ObterTodosEventosListQuery, List<EventoListVm>>
     {

@@ -9,5 +9,6 @@ namespace TuetuTech.GestaoDeBilhetes.Application.Contracts.Persistence
 {
     public interface ICategoriaRepository : IAsyncRepository<Categoria>
     {
+        Task<List<Categoria>> ObterTodasComEventosAsync(bool incluiEventosPassados);
     }
 }

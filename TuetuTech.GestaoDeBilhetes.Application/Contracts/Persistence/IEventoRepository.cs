@@ -9,5 +9,6 @@ namespace TuetuTech.GestaoDeBilhetes.Application.Contracts.Persistence
 {
     public interface IEventoRepository : IAsyncRepository<Evento>
     {
+        Task<bool> IsNomeEventoEDataUnico(string nome, DateTime dataEvento);
     }
 }
