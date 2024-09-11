@@ -36,7 +36,7 @@ namespace TuetuTech.GestaoDeBilhetes.Application.Profiles
             CreateMap<Categoria, AdicionarCategoriaCommand>().ReverseMap();
 
             CreateMap<Pedido, PedidosPorMesDto>().ReverseMap();
-
+            
 
         }
     }

@@ -12,5 +12,6 @@ namespace TuetuTech.GestaoDeBilhetes.Domain.Entities
         public Guid CategoriaId { get; set; }
         public string Nome { get; set; } = string.Empty;
         public ICollection<Evento>? Eventos { get; set; }
+
     }
 }

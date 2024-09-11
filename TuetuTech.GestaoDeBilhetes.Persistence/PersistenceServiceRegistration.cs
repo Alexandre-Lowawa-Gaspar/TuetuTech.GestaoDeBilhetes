@@ -13,7 +13,7 @@ namespace TuetuTech.GestaoDeBilhetes.Persistence
 {
     public static class PersistenceServiceRegistration
     {
-        public static IServiceCollection AddPersistenceServices(IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection AddPersistenceServices(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddDbContext<TuetuTechDbContext>(op => op.UseSqlServer(configuration.GetConnectionString("TuetuTechGestaoBilhetesConnectionString")));
             services.AddScoped(typeof(IAsyncRepository<>), typeof(BaseRepository<>));

@@ -8,9 +8,9 @@ namespace TuetuTech.GestaoDeBilhetes.Domain.Common
 {
     public class InformacaoGeral
     {
-        public string CriadoPor { get; set; }
+        public string CriadoPor { get; set; } = string.Empty;
         public DateTime DataCriacao { get; set; }
-        public string AlteradoPor { get; set; }
+        public string AlteradoPor { get; set; } = string.Empty;
         public DateTime DataAlteracao { get; set; }
     }
 }
