@@ -1,7 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using TuetuTech.GestaoDeBilhetes.Api.Services;
 using TuetuTech.GestaoDeBilhetes.Api.Utility;
 using TuetuTech.GestaoDeBilhetes.Application;
+using TuetuTech.GestaoDeBilhetes.Application.Contracts;
 using TuetuTech.GestaoDeBilhetes.Infrastruture;
 using TuetuTech.GestaoDeBilhetes.Persistence;
 namespace TuetuTech.GestaoDeBilhetes.Api
@@ -14,7 +16,8 @@ namespace TuetuTech.GestaoDeBilhetes.Api
             builder.Services.AddApplicationServices();
             builder.Services.AddInfrastructureServices(builder.Configuration);
             builder.Services.AddPersistenceServices(builder.Configuration);
-
+            builder.Services.AddScoped<ILoggedInUserService, LoggedInUserService>();
+            builder.Services.AddHttpContextAccessor();
             builder.Services.AddControllers();
 
             builder.Services.AddCors(op =>

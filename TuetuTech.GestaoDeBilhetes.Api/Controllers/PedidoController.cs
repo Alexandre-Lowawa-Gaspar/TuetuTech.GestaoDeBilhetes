@@ -4,6 +4,8 @@ using TuetuTech.GestaoDeBilhetes.Application.Features.Pedidos.Queries.ObterPedid
 
 namespace TuetuTech.GestaoDeBilhetes.Api.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class PedidoController : Controller
     {
         private readonly IMediator _mediator;

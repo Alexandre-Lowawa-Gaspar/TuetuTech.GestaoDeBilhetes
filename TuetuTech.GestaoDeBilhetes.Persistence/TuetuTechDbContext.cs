@@ -6,6 +6,7 @@ using System.Diagnostics.Tracing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TuetuTech.GestaoDeBilhetes.Application.Contracts;
 using TuetuTech.GestaoDeBilhetes.Domain.Common;
 using TuetuTech.GestaoDeBilhetes.Domain.Entities;
 
@@ -13,11 +14,16 @@ namespace TuetuTech.GestaoDeBilhetes.Persistence
 {
     public class TuetuTechDbContext : DbContext
     {
-        public TuetuTechDbContext(DbContextOptions<TuetuTechDbContext> options) : base(options)
-        {
+        private readonly ILoggedInUserService? _loggedInUserService;
+        //public TuetuTechDbContext(DbContextOptions<TuetuTechDbContext> options) : base(options)
+        //{
 
+        //}
+        public TuetuTechDbContext(DbContextOptions<TuetuTechDbContext> op, ILoggedInUserService loggedInUserService) : base(op)
+        {
+            _loggedInUserService = loggedInUserService;
         }
-        public DbSet<Evento> Eventoos { get; set; }
+        public DbSet<Evento> Eventos { get; set; }
         public DbSet<Categoria> Categorias { get; set; }
         public DbSet<Pedido> Pedidos { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -194,9 +200,11 @@ namespace TuetuTech.GestaoDeBilhetes.Persistence
                 {
                     case EntityState.Added:
                         entry.Entity.DataCriacao = DateTime.Now;
+                        entry.Entity.CriadoPor = _loggedInUserService.UtilizadorId;
                         break;
                     case EntityState.Modified:
                         entry.Entity.DataAlteracao = DateTime.Now;
+                        entry.Entity.AlteradoPor = _loggedInUserService.UtilizadorId;
                         break;
                 }
             }

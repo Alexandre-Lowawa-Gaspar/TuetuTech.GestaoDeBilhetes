@@ -35,17 +35,7 @@ namespace TuetuTech.GestaoDeBilhetes.Application.Features.Eventos.Commands.Adici
                 throw new Exceptions.ValidationException(resultadoValidacao);
 
             evento = await _eventoRepository.AdicionarAsync(evento);
-            //Sending email notification to admin address
-            var email = new Email() { To = "alexandrelowawagaspar@outlook.com", Body = $"Um novo evento foi criado: {request}", Subject = "Um novo evento foi criado" };
 
-            try
-            {
-                await _emailService.EnviarEmail(email);
-            }
-            catch (Exception ex)
-            {
-                //this shouldn't stop the API from doing else so this can be logged
-            }
             return evento.EventoId;
         }
     }

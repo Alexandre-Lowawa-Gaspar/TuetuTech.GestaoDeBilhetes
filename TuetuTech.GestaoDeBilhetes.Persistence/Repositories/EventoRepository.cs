@@ -16,7 +16,7 @@ namespace TuetuTech.GestaoDeBilhetes.Persistence.Repositories
 
         public Task<bool> IsNomeEventoEDataUnico(string nome, DateTime dataEvento)
         {
-            var resultado = _dbContext.Eventoos.Any(e => e.Nome == nome && e.Data == dataEvento);
+            var resultado = _dbContext.Eventos.Any(e => e.Nome == nome && e.Data == dataEvento);
             return Task.FromResult(resultado);
         }
     }

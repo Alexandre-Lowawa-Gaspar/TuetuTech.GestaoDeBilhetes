@@ -10,6 +10,8 @@ using TuetuTech.GestaoDeBilhetes.Application.Features.Eventos.Queries.ObterEvent
 
 namespace TuetuTech.GestaoDeBilhetes.Api.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class EventoController : Controller
     {
         private readonly IMediator _mediator;
