@@ -12,6 +12,7 @@ using TuetuTech.GestaoDeBilhetes.Application.Features.Eventos.Commands.Adicionar
 using TuetuTech.GestaoDeBilhetes.Application.Features.Eventos.Commands.AlterarEvento;
 using TuetuTech.GestaoDeBilhetes.Application.Features.Eventos.Commands.EliminarEvento;
 using TuetuTech.GestaoDeBilhetes.Application.Features.Eventos.Queries.ObterEventoDetail;
+using TuetuTech.GestaoDeBilhetes.Application.Features.Eventos.Queries.ObterEventosExportado;
 using TuetuTech.GestaoDeBilhetes.Application.Features.Eventos.Queries.ObterEventosList;
 using TuetuTech.GestaoDeBilhetes.Application.Features.Pedidos.Queries.ObterPedidosPorMeses;
 using TuetuTech.GestaoDeBilhetes.Domain.Entities;
@@ -27,16 +28,17 @@ namespace TuetuTech.GestaoDeBilhetes.Application.Profiles
             CreateMap<Evento, AdicionarEventoCommand>().ReverseMap();
             CreateMap<Evento, AlterarEventoCommand>().ReverseMap();
             CreateMap<Evento, EliminarEventoCommand>().ReverseMap();
-            // CreateMap<Evento, EventoExportDto>().ReverseMap();
+            CreateMap<Evento, EventoExportadoDto>().ReverseMap();
 
             CreateMap<Categoria, CategoriaDto>().ReverseMap();
             CreateMap<Categoria, CategoriaEventoDto>().ReverseMap();
             CreateMap<Categoria, CategoriaListVm>().ReverseMap();
             CreateMap<Categoria, CategoriaDetailVm>().ReverseMap();
             CreateMap<Categoria, AdicionarCategoriaCommand>().ReverseMap();
+            CreateMap<Categoria, AdicionarCategoriaDto>().ReverseMap();
 
             CreateMap<Pedido, PedidosPorMesDto>().ReverseMap();
-            
+
 
         }
     }

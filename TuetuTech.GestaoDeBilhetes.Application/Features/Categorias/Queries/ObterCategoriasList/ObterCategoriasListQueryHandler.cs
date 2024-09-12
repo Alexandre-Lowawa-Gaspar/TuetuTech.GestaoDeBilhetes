@@ -12,10 +12,10 @@ namespace TuetuTech.GestaoDeBilhetes.Application.Features.Categorias.Queries.Obt
 {
     public class ObterCategoriasListQueryHandler : IRequestHandler<ObterCategoriasListQuery, List<CategoriaListVm>>
     {
-        private readonly IAsyncRepository<Categoria> _categoriaRepository;
+        private readonly ICategoriaRepository _categoriaRepository;
         private readonly IMapper _mapper;
 
-        public ObterCategoriasListQueryHandler(IAsyncRepository<Categoria> categoriaRepository, IMapper mapper)
+        public ObterCategoriasListQueryHandler(ICategoriaRepository categoriaRepository, IMapper mapper)
         {
             _categoriaRepository = categoriaRepository;
             _mapper = mapper;

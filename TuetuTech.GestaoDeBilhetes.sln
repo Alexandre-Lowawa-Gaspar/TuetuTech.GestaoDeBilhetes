@@ -15,15 +15,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{37A1385F-7458-4509-BD4B-4A8C3767F514}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TuetuTech.GestaoDeBilhetes.Domain", "TuetuTech.GestaoDeBilhetes.Domain\TuetuTech.GestaoDeBilhetes.Domain.csproj", "{3E77D900-6C84-4141-BD44-1A08A508D4B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TuetuTech.GestaoDeBilhetes.Domain", "TuetuTech.GestaoDeBilhetes.Domain\TuetuTech.GestaoDeBilhetes.Domain.csproj", "{3E77D900-6C84-4141-BD44-1A08A508D4B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TuetuTech.GestaoDeBilhetes.Application", "TuetuTech.GestaoDeBilhetes.Application\TuetuTech.GestaoDeBilhetes.Application.csproj", "{96786718-E35F-48B8-8FDD-A1F0D0F2D72C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TuetuTech.GestaoDeBilhetes.Application", "TuetuTech.GestaoDeBilhetes.Application\TuetuTech.GestaoDeBilhetes.Application.csproj", "{96786718-E35F-48B8-8FDD-A1F0D0F2D72C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TuetuTech.GestaoDeBilhetes.Persistence", "TuetuTech.GestaoDeBilhetes.Persistence\TuetuTech.GestaoDeBilhetes.Persistence.csproj", "{422F6FD3-E076-4E4B-9225-BC685E7FA510}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TuetuTech.GestaoDeBilhetes.Persistence", "TuetuTech.GestaoDeBilhetes.Persistence\TuetuTech.GestaoDeBilhetes.Persistence.csproj", "{422F6FD3-E076-4E4B-9225-BC685E7FA510}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TuetuTech.GestaoDeBilhetes.Infrastruture", "TuetuTech.GestaoDeBilhetes.Infrastruture\TuetuTech.GestaoDeBilhetes.Infrastruture.csproj", "{7145B701-CDEE-4C7B-9280-D89EB2CB9076}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TuetuTech.GestaoDeBilhetes.Infrastruture", "TuetuTech.GestaoDeBilhetes.Infrastruture\TuetuTech.GestaoDeBilhetes.Infrastruture.csproj", "{7145B701-CDEE-4C7B-9280-D89EB2CB9076}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TuetuTech.GestaoDeBilhetes.Api", "TuetuTech.GestaoDeBilhetes.Api\TuetuTech.GestaoDeBilhetes.Api.csproj", "{5574FBDC-E14C-4B7B-A43F-56524E9EAF3F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TuetuTech.GestaoDeBilhetes.Api", "TuetuTech.GestaoDeBilhetes.Api\TuetuTech.GestaoDeBilhetes.Api.csproj", "{5574FBDC-E14C-4B7B-A43F-56524E9EAF3F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TuetuTech.GestaoDeBilhetes.Application.UnitTests", "TuetuTech.GestaoDeBilhetes.Application.UnitTests\TuetuTech.GestaoDeBilhetes.Application.UnitTests.csproj", "{817DE13B-291E-481F-9741-BC1CB899B3CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{5574FBDC-E14C-4B7B-A43F-56524E9EAF3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5574FBDC-E14C-4B7B-A43F-56524E9EAF3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5574FBDC-E14C-4B7B-A43F-56524E9EAF3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{817DE13B-291E-481F-9741-BC1CB899B3CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{817DE13B-291E-481F-9741-BC1CB899B3CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{817DE13B-291E-481F-9741-BC1CB899B3CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{817DE13B-291E-481F-9741-BC1CB899B3CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -65,6 +71,7 @@ Global
 		{422F6FD3-E076-4E4B-9225-BC685E7FA510} = {CE8CC1A6-E31F-49CB-98D2-452354374674}
 		{7145B701-CDEE-4C7B-9280-D89EB2CB9076} = {CE8CC1A6-E31F-49CB-98D2-452354374674}
 		{5574FBDC-E14C-4B7B-A43F-56524E9EAF3F} = {9B1CE236-2725-4C7F-B030-76CAB57AE69D}
+		{817DE13B-291E-481F-9741-BC1CB899B3CD} = {1B5CB90A-19CB-4F65-971E-69384867A172}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {71034514-BEF2-4A8E-A7BE-D4189FCDDA07}
