@@ -8,7 +8,7 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using TuetuTech.GestaoDeBilhetes.API.IntegrationTests.Base;
-using TuetuTech.GestaoDeBilhetes.Application.Features.Categorias.Queries.ObterCategoriasList;
+using TuetuTech.GestaoDeBilhetes.Application.Features.Categories.Queries.GetCategoriesList;
 using TuetuTech.GestaoDeBilhetes.Persistence;
 
 namespace TuetuTech.GestaoDeBilhetes.API.IntegrationTests.Controllers
@@ -32,9 +32,9 @@ namespace TuetuTech.GestaoDeBilhetes.API.IntegrationTests.Controllers
 
             var respostaString = await resposta.Content.ReadAsStringAsync();
 
-            var result = JsonSerializer.Deserialize<List<CategoriaListVm>>(respostaString);
+            var result = JsonSerializer.Deserialize<List<CategoryListVm>>(respostaString);
 
-            Assert.IsType<List<CategoriaListVm>>(result);
+            Assert.IsType<List<CategoryListVm>>(result);
             Assert.NotEmpty(result);
         }
     }

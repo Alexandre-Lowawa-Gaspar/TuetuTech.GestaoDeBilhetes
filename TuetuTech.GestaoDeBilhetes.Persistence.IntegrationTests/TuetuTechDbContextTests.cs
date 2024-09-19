@@ -21,16 +21,16 @@ namespace TuetuTech.GestaoDeBilhetes.Persistence.IntegrationTests
             var dbContextOptions = new DbContextOptionsBuilder<TuetuTechDbContext>().UseInMemoryDatabase(Guid.NewGuid().ToString()).Options;
             _loggedInUserId = "00000000-0000-0000-0000-000000000000";
             _LoggedInUserServiceMock = new Mock<ILoggedInUserService>();
-            _LoggedInUserServiceMock.Setup(m => m.UtilizadorId).Returns(_loggedInUserId);
+            _LoggedInUserServiceMock.Setup(m => m.UserId).Returns(_loggedInUserId);
             _tuetuTechDbContext = new TuetuTechDbContext(dbContextOptions, _LoggedInUserServiceMock.Object);
         }
         [Fact]
         public async void Save_SetPropriedadeCriadoPor()
         {
-            var ev = new Evento() { EventoId = Guid.NewGuid(), Nome = "Evento teste" };
-            _tuetuTechDbContext.Eventos.Add(ev);
+            var ev = new Event() { EventId = Guid.NewGuid(), Name = "Evento teste" };
+            _tuetuTechDbContext.Events.Add(ev);
             await _tuetuTechDbContext.SaveChangesAsync();
-            ev.CriadoPor.ShouldBe(_loggedInUserId);
+            ev.CreatedBy.ShouldBe(_loggedInUserId);
         }
     }
 }

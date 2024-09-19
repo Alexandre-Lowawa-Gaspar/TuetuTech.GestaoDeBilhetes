@@ -8,6 +8,6 @@ namespace TuetuTech.GestaoDeBilhetes.Application.Contracts
 {
     public interface ILoggedInUserService
     {
-        public string UtilizadorId { get; }
+        public string UserId { get; }
     }
 }

@@ -12,42 +12,42 @@ namespace TuetuTech.GestaoDeBilhetes.Application.UnitTests.Mocks
 {
     public class RepositoryMocks
     {
-        public static Mock<ICategoriaRepository> ObterCategoriaRepository()
+        public static Mock<ICategoryRepository> ObterCategoriaRepository()
         {
             var concertoGuid = Guid.Parse("{B0788D2F-8003-43C1-92A4-EDC76A7C5DDE}");
             var musicalGuid = Guid.Parse("{6313179F-7837-473A-A4D5-A5571B43E6A6}");
             var showGuid = Guid.Parse("{BF3F3002-7E53-441E-8B76-F6280BE284AA}");
             var conferenciaGuid = Guid.Parse("{FE98F549-E790-4E9F-AA16-18C2292A2EE9}");
 
-            var categorias = new List<Categoria>
+            var categorias = new List<Domain.Entities.Category>
             {
-                new Categoria
+                new Domain.Entities.Category
                 {
-                    CategoriaId = concertoGuid,
-                    Nome = "Concerts"
+                    CategoryId = concertoGuid,
+                    Name = "Concerts"
                 },
-                new Categoria
+                new Domain.Entities.Category
                 {
-                    CategoriaId = musicalGuid,
-                    Nome = "Musicais"
+                    CategoryId = musicalGuid,
+                    Name = "Musicais"
                 },
-                new Categoria
+                new Domain.Entities.Category
                 {
-                    CategoriaId = conferenciaGuid,
-                    Nome = "Conferencias"
+                    CategoryId = conferenciaGuid,
+                    Name = "Conferencias"
                 },
-                 new Categoria
+                 new Domain.Entities.Category
                 {
-                    CategoriaId = showGuid,
-                    Nome = "Shows"
+                    CategoryId = showGuid,
+                    Name = "Shows"
                 }
             };
 
-            var mockCategoriaRepository = new Mock<ICategoriaRepository>();
-            mockCategoriaRepository.Setup(repo => repo.ObterTodosAsync()).ReturnsAsync(categorias);
+            var mockCategoriaRepository = new Mock<ICategoryRepository>();
+            mockCategoriaRepository.Setup(repo => repo.ListAllAsync()).ReturnsAsync(categorias);
 
-            mockCategoriaRepository.Setup(repo => repo.AdicionarAsync(It.IsAny<Categoria>())).ReturnsAsync(
-                (Categoria category) =>
+            mockCategoriaRepository.Setup(repo => repo.AddAsync(It.IsAny<Domain.Entities.Category>())).ReturnsAsync(
+                (Domain.Entities.Category category) =>
                 {
                     categorias.Add(category);
                     return category;

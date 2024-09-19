@@ -8,11 +8,11 @@ namespace TuetuTech.GestaoDeBilhetes.Application.Contracts.Persistence
 {
     public interface IAsyncRepository<T> where T : class
     {
-        Task<T?> ObterPorIdAsync(Guid id);
-        Task<IReadOnlyList<T>> ObterTodosAsync();
-        Task<T> AdicionarAsync(T entidade);
-        Task AlterarAsync(T entidade);
-        Task EliminarAsync(T entidade);
-        Task<IReadOnlyList<T>> ObterRespostaPaginadaAsync(int pagina, int tamanho);
+        Task<T?> GetByIdAsync(Guid id);
+        Task<IReadOnlyList<T>> ListAllAsync();
+        Task<T> AddAsync(T entidade);
+        Task UpdateAsync(T entidade);
+        Task DeleteAsync(T entidade);
+        Task<IReadOnlyList<T>> GetPagedReponseAsync(int page, int size);
     }
 }

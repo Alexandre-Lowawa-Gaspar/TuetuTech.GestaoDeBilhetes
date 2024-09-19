@@ -19,25 +19,25 @@ namespace TuetuTech.GestaoDeBilhetes.API.IntegrationTests.Base
             var conferenciaGuid = Guid.Parse("{FE98F549-E790-4E9F-AA16-18C2292A2EE9}");
 
 
-            context.Categorias.Add(new Categoria
+            context.Categories.Add(new Category
             {
-                CategoriaId = concertoGuid,
-                Nome = "Concerts"
+                CategoryId = concertoGuid,
+                Name = "Concerts"
             });
-            context.Categorias.Add(new Categoria
+            context.Categories.Add(new Category
             {
-                CategoriaId = musicalGuid,
-                Nome = "Musicais"
+                CategoryId = musicalGuid,
+                Name = "Musicais"
             });
-            context.Categorias.Add(new Categoria
+            context.Categories.Add(new Category
             {
-                CategoriaId = conferenciaGuid,
-                Nome = "Conferencias"
+                CategoryId = conferenciaGuid,
+                Name = "Conferencias"
             });
-            context.Categorias.Add(new Categoria
+            context.Categories.Add(new Category
             {
-                CategoriaId = showGuid,
-                Nome = "Shows"
+                CategoryId = showGuid,
+                Name = "Shows"
             });
             context.SaveChanges();
 

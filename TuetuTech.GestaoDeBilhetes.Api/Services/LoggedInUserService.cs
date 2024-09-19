@@ -11,7 +11,7 @@ namespace TuetuTech.GestaoDeBilhetes.Api.Services
         {
             _httpContextAccessor = httpContextAccessor;
         }
-        public string UtilizadorId
+        public string UserId
         {
             get
             {

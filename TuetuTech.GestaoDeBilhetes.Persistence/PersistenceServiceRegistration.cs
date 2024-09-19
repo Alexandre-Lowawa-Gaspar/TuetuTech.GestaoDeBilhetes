@@ -17,9 +17,9 @@ namespace TuetuTech.GestaoDeBilhetes.Persistence
         {
             services.AddDbContext<TuetuTechDbContext>(op => op.UseSqlServer(configuration.GetConnectionString("TuetuTechGestaoBilhetesConnectionString")));
             services.AddScoped(typeof(IAsyncRepository<>), typeof(BaseRepository<>));
-            services.AddScoped<ICategoriaRepository, CategoriaRepository>();
-            services.AddScoped<IEventoRepository, EventoRepository>();
-            services.AddScoped<IPedidoRepository, PedidoRepository>();
+            services.AddScoped<ICategoryRepository, CategoryRepository>();
+            services.AddScoped<IEventRepository, EventRepository>();
+            services.AddScoped<IOrderRepository, OrderRepository>();
             return services;
         }
     }

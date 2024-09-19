@@ -27,9 +27,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TuetuTech.GestaoDeBilhetes.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TuetuTech.GestaoDeBilhetes.Application.UnitTests", "TuetuTech.GestaoDeBilhetes.Application.UnitTests\TuetuTech.GestaoDeBilhetes.Application.UnitTests.csproj", "{817DE13B-291E-481F-9741-BC1CB899B3CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TuetuTech.GestaoDeBilhetes.Persistence.IntegrationTests", "TuetuTech.GestaoDeBilhetes.Persistence.IntegrationTests\TuetuTech.GestaoDeBilhetes.Persistence.IntegrationTests.csproj", "{2D398486-E6F7-4014-83F6-AAA02B7B3F68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TuetuTech.GestaoDeBilhetes.Persistence.IntegrationTests", "TuetuTech.GestaoDeBilhetes.Persistence.IntegrationTests\TuetuTech.GestaoDeBilhetes.Persistence.IntegrationTests.csproj", "{2D398486-E6F7-4014-83F6-AAA02B7B3F68}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TuetuTech.GestaoDeBilhetes.API.IntegrationTests", "TuetuTech.GestaoDeBilhetes.API.IntegrationTests\TuetuTech.GestaoDeBilhetes.API.IntegrationTests.csproj", "{1006FD03-296F-4D13-A7D7-E11C8AA1B334}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TuetuTech.GestaoDeBilhetes.API.IntegrationTests", "TuetuTech.GestaoDeBilhetes.API.IntegrationTests\TuetuTech.GestaoDeBilhetes.API.IntegrationTests.csproj", "{1006FD03-296F-4D13-A7D7-E11C8AA1B334}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TuetuTech.GestaoDeBilhetes.App", "TuetuTech.GestaoDeBilhetes.App\TuetuTech.GestaoDeBilhetes.App.csproj", "{54145285-68E4-4D0E-83E6-542FE39BA635}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GloboTicket.TicketManagement.App", "..\..\..\Videos\Courses\Pluralsight - ASP.NET Core 6 Clean Architecture 2022-12\asp-dot-net-core-6-clean-architecture\08\demos\Demos\GloboTicket.TicketManagement.App\GloboTicket.TicketManagement.App.csproj", "{281C5AB6-D26B-49AA-A89D-C5FE9ABF8FB4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +73,14 @@ Global
 		{1006FD03-296F-4D13-A7D7-E11C8AA1B334}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1006FD03-296F-4D13-A7D7-E11C8AA1B334}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1006FD03-296F-4D13-A7D7-E11C8AA1B334}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54145285-68E4-4D0E-83E6-542FE39BA635}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54145285-68E4-4D0E-83E6-542FE39BA635}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54145285-68E4-4D0E-83E6-542FE39BA635}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54145285-68E4-4D0E-83E6-542FE39BA635}.Release|Any CPU.Build.0 = Release|Any CPU
+		{281C5AB6-D26B-49AA-A89D-C5FE9ABF8FB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{281C5AB6-D26B-49AA-A89D-C5FE9ABF8FB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{281C5AB6-D26B-49AA-A89D-C5FE9ABF8FB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{281C5AB6-D26B-49AA-A89D-C5FE9ABF8FB4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -86,6 +98,8 @@ Global
 		{817DE13B-291E-481F-9741-BC1CB899B3CD} = {1B5CB90A-19CB-4F65-971E-69384867A172}
 		{2D398486-E6F7-4014-83F6-AAA02B7B3F68} = {1B5CB90A-19CB-4F65-971E-69384867A172}
 		{1006FD03-296F-4D13-A7D7-E11C8AA1B334} = {1B5CB90A-19CB-4F65-971E-69384867A172}
+		{54145285-68E4-4D0E-83E6-542FE39BA635} = {37A1385F-7458-4509-BD4B-4A8C3767F514}
+		{281C5AB6-D26B-49AA-A89D-C5FE9ABF8FB4} = {37A1385F-7458-4509-BD4B-4A8C3767F514}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {71034514-BEF2-4A8E-A7BE-D4189FCDDA07}

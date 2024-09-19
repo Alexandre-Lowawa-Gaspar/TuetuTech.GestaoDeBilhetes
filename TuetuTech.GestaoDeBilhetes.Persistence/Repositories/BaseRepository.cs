@@ -17,23 +17,23 @@ namespace TuetuTech.GestaoDeBilhetes.Persistence.Repositories
             _dbContext = dbContext;
         }
 
-        public virtual async Task<T?> ObterPorIdAsync(Guid id)
+        public virtual async Task<T?> GetByIdAsync(Guid id)
         {
             T? t = await _dbContext.Set<T>().FindAsync(id);
             return t;
         }
 
-        public async Task<IReadOnlyList<T>> ObterTodosAsync()
+        public async Task<IReadOnlyList<T>> ListAllAsync()
         {
             return await _dbContext.Set<T>().ToListAsync();
         }
 
-        public async virtual Task<IReadOnlyList<T>> ObterRespostaPaginadaAsync(int pagina, int tamanho)
+        public async virtual Task<IReadOnlyList<T>> GetPagedReponseAsync(int pagina, int tamanho)
         {
             return await _dbContext.Set<T>().Skip((pagina - 1) * tamanho).Take(tamanho).AsNoTracking().ToListAsync();
         }
 
-        public async Task<T> AdicionarAsync(T entity)
+        public async Task<T> AddAsync(T entity)
         {
             await _dbContext.Set<T>().AddAsync(entity);
             await _dbContext.SaveChangesAsync();
@@ -41,13 +41,13 @@ namespace TuetuTech.GestaoDeBilhetes.Persistence.Repositories
             return entity;
         }
 
-        public async Task AlterarAsync(T entity)
+        public async Task UpdateAsync(T entity)
         {
             _dbContext.Entry(entity).State = EntityState.Modified;
             await _dbContext.SaveChangesAsync();
         }
 
-        public async Task EliminarAsync(T entity)
+        public async Task DeleteAsync(T entity)
         {
             _dbContext.Set<T>().Remove(entity);
             await _dbContext.SaveChangesAsync();
