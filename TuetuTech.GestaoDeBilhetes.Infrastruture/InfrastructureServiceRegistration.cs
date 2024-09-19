@@ -6,8 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TuetuTech.GestaoDeBilhetes.Application.Contracts.Infrastruture;
-using TuetuTech.GestaoDeBilhetes.Application.Models.Mail;
-using TuetuTech.GestaoDeBilhetes.Infrastruture.Mail;
+using TuetuTech.GestaoDeBilhetes.Infrastruture.FileExport;
 
 namespace TuetuTech.GestaoDeBilhetes.Infrastruture
 {
@@ -15,8 +14,7 @@ namespace TuetuTech.GestaoDeBilhetes.Infrastruture
     {
         public static IServiceCollection AddInfrastructureServices(this IServiceCollection services, IConfiguration configuration)
         {
-            services.Configure<EmailSettings>(configuration.GetSection("EmailSettings"));
-            services.AddTransient<IEmailService, EmailService>();
+            services.AddTransient<ICsvExporter, CsvExporter>();
             return services;
         }
     }

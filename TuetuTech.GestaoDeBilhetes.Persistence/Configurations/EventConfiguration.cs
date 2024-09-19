@@ -9,11 +9,11 @@ using TuetuTech.GestaoDeBilhetes.Domain.Entities;
 
 namespace TuetuTech.GestaoDeBilhetes.Persistence.Configurations
 {
-    public class EventConfiguration : IEntityTypeConfiguration<Evento>
+    public class EventConfiguration : IEntityTypeConfiguration<Event>
     {
-        public void Configure(EntityTypeBuilder<Evento> builder)
+        public void Configure(EntityTypeBuilder<Event> builder)
         {
-            builder.Property(x => x.Nome).IsRequired()
+            builder.Property(x => x.Name).IsRequired()
                 .HasMaxLength(50);
         }
     }
